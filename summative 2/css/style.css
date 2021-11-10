@@ -1,0 +1,39 @@
+.nav {
+  height: 11vh;
+  width: 100vw;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .nav-logo {
+    height: 9vh;
+    padding-left: 1rem; }
+  .nav-ul {
+    display: flex;
+    align-items: center;
+    margin: 1rem; }
+  .nav-li {
+    font-size: 1.5rem;
+    color: black;
+    padding: 1rem; }
+
+.search-container {
+  display: flex;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin-right: 1rem; }
+
+.search-box {
+  background: none;
+  border: none;
+  border-right: 2px solid black; }
+
+.search-icon {
+  pointer-events: none;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0.5rem;
+  padding-left: 0.3rem; }
+
+/*# sourceMappingURL=style.css.map */
