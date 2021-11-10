@@ -1,13 +1,13 @@
 .nav{
-    height: 11vh;
+    min-height: 10vh;
     width: 100vw;
-    background: #333;
+    background: lightgray;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &-logo{
-        height: 9vh;
+        height: 8vh;
         padding-left: 1rem;
     }
 
@@ -15,10 +15,11 @@
         display: flex;
         align-items: center;
         margin: 1rem;
+        padding-left: 55rem;
     }
 
     &-li{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: black;
         padding: 1rem;
     }
