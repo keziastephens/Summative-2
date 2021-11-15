@@ -1,5 +1,5 @@
 .intro{
-    min-height: 90vh;
+    min-height: 83vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@
 
 .form{
     overflow: hidden;
-    height: 70%;
+    min-height: 70%;
     width: 40%;
     display: flex;
     align-items: center;

@@ -25,7 +25,7 @@ let objectArray = [
     {
         id: 101,
         type: 'Hotel',
-        location: 'Queenstown',
+        location: 'Queenstown, NZ',
         name: 'Heritage Hotel',
         people: '1-2',
         minPeople: 1,
@@ -55,7 +55,7 @@ let objectArray = [
     {
         id: 102,
         type: 'Hostel',
-        location: 'Queenstown',
+        location: 'Queenstown, NZ',
         name: 'Adventure Hostel',
         people: '1',
         minPeople: 1,
@@ -83,7 +83,7 @@ let objectArray = [
     {
         id: 103,
         type: 'Motel',
-        location: 'Queenstown',
+        location: 'Queenstown, NZ',
         name: 'Colonial Village Motel',
         people: '2-4',
         minPeople: 2,
@@ -114,7 +114,7 @@ let objectArray = [
     {
         id: 104,
         type: 'House',
-        location: 'Queenstown',
+        location: 'Queenstown, NZ',
         name: 'Modbox Rua',
         people: '1-4',
         minPeople: 1,
@@ -154,7 +154,7 @@ let objectArray = [
     {
         id: 105,
         type: 'Hotel',
-        location: 'Wanaka',
+        location: 'Wanaka, NZ',
         name: 'Edgewater Hotel',
         people: '1-2',
         minPeople: 1,
@@ -197,16 +197,16 @@ let objectArray = [
 
 function userSubmit(event){
     event.preventDefault();
-    // created an array of months of the year
+    
     let months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
     let msDay = 1000 * 3600 * 24;
 
-    // how to get data from the date input
+    
     const checkInDate = new Date($('#checkInDate').val());
     const checkOutDate = new Date($('#checkOutDate').val());
     console.log(checkInDate);
 
-    // how to get the individual data of day, month and year
+    
     let checkInDay = checkInDate.getDate(),
         checkInMonth = checkInDate.getMonth(),
         checkInYear = checkInDate.getFullYear(),
@@ -214,8 +214,7 @@ function userSubmit(event){
         checkOutMonth = checkOutDate.getMonth(),
         checkOutYear = checkOutDate.getFullYear();
 
-    // looked at how to join the data - join function turns
-    // an array into a string
+
     let checkInDetails = [checkInDay,checkInMonth,checkInYear].join('/');
     let checkOutDetails = [checkOutDay,checkOutMonth,checkOutYear].join('/');
     console.log(checkInDetails);
@@ -229,10 +228,10 @@ function userSubmit(event){
         alert('check out day cant be before check in date');
     }
 
-   //    calculate the difference
+
    let difference = checkOutDate.getTime() - checkInDate.getTime();
-//    console.log(difference);
-   //converts time to a day value from ms
+   console.log(difference);
+
    let dayDifference = difference/msDay;
    console.log(dayDifference);
 
@@ -242,6 +241,8 @@ function userSubmit(event){
    displayOptions(dayDifference, valueOfPeople)
     
 };
+
+userSubmit();
 
 // ===================================================================
 // end of user input function
@@ -289,9 +290,13 @@ function generateCard(x){
         <div class="card" style="width: 18rem;">
             <img src="${objectArray[i].image}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${objectArray[i].name}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's contentz.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="card-body__left">
+                    <h5 class="card-title">${objectArray[i].name}</h5>
+                    <p class="card-text">${objectArray[i].location}</p>
+                </div>
+                <div class="card-body__right">
+                    <h5 class="card-title">$${objectArray[i].price} NZD Per Night</h5>
+                </div>
             </div>
         </div>
         `    

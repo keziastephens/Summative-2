@@ -33,8 +33,12 @@
     <!-- start of nav bar -->
     
     <nav class="nav">
+      <div>
         <img class="nav-logo" src="./img/winterscapes.svg" alt="Winterscapes">
+      </div>
 
+
+      <div class="nav-right">
         <ul class="nav-ul">
             <h1 class="nav-li">Home</h2>
             <h1 class="nav-li">About TNZ</h2>
@@ -44,7 +48,7 @@
             <input type="text" name="search" value="" id="searchWord" class="search-box" placeholder="Search">
             <div id="searchFilter"><i class="fas fa-search search-icon"></i></div>
         </div>
-
+      </div>
     </nav>
 
     <!-- end of nav bar -->
@@ -67,7 +71,13 @@
 
             <div class="form-item">
               <label for="locationSelect">location</label>
-              <input class="form-input__location" id="locationSelect" type="location">
+              <select name="locationSelect" id="selectedLocation" class="form-input__location">
+                <option value="1">Hamner Springs</option>
+                <option value="2">Mt Hutt</option>
+                <option value="3">Queenstown</option>
+                <option value="4">Taupo</option>
+                <option value="5">Wanaka</option>
+            </select>
               <i class="fas fa-map-marker-alt"></i>
             </div>
 
